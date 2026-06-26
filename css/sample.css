@@ -1,0 +1,372 @@
+/* =========================
+   FILTER
+========================= */
+
+.sample-filter {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.sample-filter button {
+    border: none;
+    background: #eef2ff;
+
+    color: #6b7280;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.sample-filter button:hover {
+    background: #dfe7ff;
+}
+
+.sample-filter button.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.gallery-item {
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.gallery-item img {
+    width: 100%;
+    aspect-ratio: 1/1;
+
+    object-fit: cover;
+
+    background: #eef2ff;
+}
+
+.sample-name {
+    padding: 12px 14px 4px;
+
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.sample-price {
+    padding: 0 14px 14px;
+
+    color: #6b7280;
+    font-size: 14px;
+}
+
+.sample-filter-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    gap: 16px;
+}
+
+.sample-request-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 24px;
+    font-size: 14px;
+
+    background: var(--primary);
+    color: #fff;
+
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+
+    flex-shrink: 0;
+}
+
+.sample-request-btn:hover {
+    background: var(--primary-hover);
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.sample-modal {
+    position: fixed;
+    inset: 0;
+
+    background: rgba(0, 0, 0, .6);
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    z-index: 9999;
+}
+
+.sample-modal.active {
+    display: flex;
+}
+
+.modal-box {
+    width: min(900px, 92%);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: white;
+
+    border-radius: 20px;
+
+    padding: 24px;
+
+    position: relative;
+}
+
+/* =========================
+   CLOSE
+========================= */
+
+.modal-close {
+    position: absolute;
+
+    top: 16px;
+    right: 16px;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: #f3f4f6;
+
+    cursor: pointer;
+
+    font-size: 24px;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.modal-image-wrap {
+    position: relative;
+
+    margin-bottom: 20px;
+}
+
+.modal-image-wrap img {
+    width: 100%;
+    max-height: 500px;
+
+    object-fit: contain;
+
+    border-radius: 14px;
+
+    background: #eef2ff;
+}
+
+/* =========================
+   SLIDE
+========================= */
+
+.slide-btn {
+    position: absolute;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, .9);
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.prev {
+    left: 12px;
+}
+
+.next {
+    right: 12px;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+#modalTitle {
+    font-size: 28px;
+    margin-bottom: 14px;
+}
+
+/* =========================
+   TAGS
+========================= */
+
+.modal-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+
+    margin-bottom: 20px;
+}
+
+.modal-tags span {
+    background: #eef2ff;
+
+    color: var(--primary);
+
+    padding: 6px 12px;
+
+    border-radius: 999px;
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* =========================
+   DETAIL
+========================= */
+
+.modal-detail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+}
+
+.modal-detail div {
+    background: #f8faff;
+
+    border: 1px solid var(--border);
+
+    border-radius: 12px;
+
+    padding: 14px;
+}
+
+.modal-detail strong {
+    display: block;
+    margin-bottom: 6px;
+}
+
+/* =========================
+   NOTICE
+========================= */
+
+.modal-notice {
+    color: #6b7280;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.modal-confirm {
+    width: 100%;
+    height: 52px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: var(--primary);
+    color: white;
+
+    font-weight: 700;
+
+    cursor: pointer;
+}
+
+.modal-confirm:hover {
+    background: var(--primary-hover);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1200px) {
+
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+@media (max-width: 900px) {
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .modal-detail {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+
+    #modalTitle {
+        font-size: 22px;
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .sample-filter-wrap {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .sample-request-btn {
+        width: 100%;
+    }
+
+}

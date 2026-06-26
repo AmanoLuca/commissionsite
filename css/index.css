@@ -1,0 +1,159 @@
+.hero-box {
+    background: #f7f9ff;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    padding: 40px;
+    margin-bottom: 24px;
+
+    text-align: center;
+}
+
+.hero-box h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero-box p {
+    color: var(--sub);
+}
+
+.sample-section {
+    margin-bottom: 24px;
+}
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-left span {
+    width: 5px;
+    height: 30px;
+
+    background: var(--primary);
+    border-radius: 999px;
+}
+
+.title-left h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+.sample-more-btn {
+    background: var(--primary);
+    color: white;
+
+    padding: 12px 24px;
+
+    border-radius: 999px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+.sample-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.sample-card {
+    overflow: hidden;
+
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    transition: .25s;
+}
+
+.sample-card:hover {
+    transform: translateY(-6px);
+}
+
+.sample-placeholder {
+    height: 220px;
+    background: #eef2ff;
+}
+
+.sample-info {
+    padding: 14px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.sample-info span:first-child {
+    font-weight: 700;
+}
+
+.sample-info span:last-child {
+    color: #666;
+    font-size: 14px;
+}
+
+.notice-box {
+    margin-top: 30px;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    padding: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.notice-btn {
+    background: var(--primary);
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 999px;
+}
+
+@media (max-width:1024px) {
+
+    .sample-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width:768px) {
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .sample-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .notice-box {
+        flex-direction: column;
+        gap: 16px;
+        align-items: flex-start;
+    }
+
+    .banner {
+        height: 160px;
+    }
+
+    .banner::before {
+        font-size: 32px;
+    }
+}

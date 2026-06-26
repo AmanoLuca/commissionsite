@@ -1,0 +1,369 @@
+/* =========================
+   ADMIN LAYOUT
+========================= */
+
+.admin-layout{
+    display:flex;
+    min-height:100vh;
+    background:var(--bg);
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+    width:280px;
+
+    background:#fff;
+
+    border-right:1px solid var(--border);
+
+    padding:24px;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:12px;
+}
+
+.sidebar h2{
+    margin:0;
+    font-size:24px;
+    font-weight:800;
+}
+
+#userInfo{
+    color:var(--subtext);
+    font-size:14px;
+    margin-bottom:16px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu-btn{
+    width:100%;
+
+    border:none;
+
+    padding:14px 16px;
+
+    border-radius:14px;
+
+    background:#f5f7ff;
+
+    cursor:pointer;
+
+    text-align:left;
+
+    font-size:15px;
+    font-weight:600;
+
+    transition:.2s;
+}
+
+.menu-btn:hover{
+    background:#e8edff;
+}
+
+.menu-btn.active{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* =========================
+   LOGOUT
+========================= */
+
+.logout-btn{
+    margin-top:auto;
+
+    border:none;
+
+    padding:14px;
+
+    border-radius:14px;
+
+    background:#ff6b81;
+    color:#fff;
+
+    cursor:pointer;
+
+    font-weight:700;
+}
+
+.logout-btn:hover{
+    opacity:.9;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.content{
+    flex:1;
+    padding:32px;
+}
+
+.content h1{
+    margin-top:0;
+    margin-bottom:20px;
+}
+
+/* =========================
+   VIEW
+========================= */
+
+.view{
+    display:none;
+}
+
+.view.active{
+    display:block;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:24px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+        0 8px 24px rgba(0,0,0,.04);
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.dashboard-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.stat-card{
+    background:#fff;
+
+    border:1px solid var(--border);
+
+    border-radius:20px;
+
+    padding:24px;
+}
+
+.stat-card h3{
+    margin:0 0 10px;
+    color:var(--subtext);
+}
+
+.stat-card p{
+    margin:0;
+    font-size:32px;
+    font-weight:800;
+}
+
+/* =========================
+   FORM
+========================= */
+
+input,
+select,
+textarea{
+    width:100%;
+
+    padding:14px;
+
+    border:1px solid var(--border);
+
+    border-radius:12px;
+
+    font-size:14px;
+
+    margin-bottom:10px;
+}
+
+input:focus,
+select:focus,
+textarea:focus{
+    outline:none;
+
+    border-color:var(--primary);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+button{
+    font-family:inherit;
+}
+
+#saveSlotBtn,
+#saveSiteBtn{
+    border:none;
+
+    background:var(--primary);
+    color:white;
+
+    padding:14px 20px;
+
+    border-radius:12px;
+
+    cursor:pointer;
+
+    font-weight:700;
+}
+
+#saveSlotBtn:hover,
+#saveSiteBtn:hover{
+    background:var(--primary-hover);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+#applyTable{
+    width:100%;
+    border-collapse:collapse;
+}
+
+#applyTable th{
+    background:#f8faff;
+}
+
+#applyTable th,
+#applyTable td{
+    border-bottom:1px solid #eef2ff;
+
+    padding:14px;
+
+    text-align:center;
+}
+
+#applyTable tr:hover{
+    background:#fafcff;
+}
+
+/* =========================
+   PAGINATION
+========================= */
+
+#pagination{
+    margin-top:20px;
+
+    display:flex;
+    justify-content:center;
+    gap:8px;
+}
+
+#pagination button{
+    border:none;
+
+    width:38px;
+    height:38px;
+
+    border-radius:10px;
+
+    background:#eef2ff;
+
+    cursor:pointer;
+}
+
+/* =========================
+   MODAL
+========================= */
+
+.modal{
+    display:none;
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.5);
+
+    z-index:999;
+}
+
+.modal.active{
+    display:flex;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.modal-content,
+.image-modal-content{
+    background:#fff;
+
+    border-radius:20px;
+
+    padding:24px;
+
+    max-width:900px;
+    width:90%;
+
+    max-height:90vh;
+
+    overflow:auto;
+}
+
+.image-modal-content img{
+    width:100%;
+    border-radius:12px;
+}
+
+#closeDetailModal,
+#closeImageModal{
+    float:right;
+
+    border:none;
+
+    width:40px;
+    height:40px;
+
+    border-radius:50%;
+
+    background:#f1f5ff;
+
+    cursor:pointer;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width:900px){
+
+    .admin-layout{
+        flex-direction:column;
+    }
+
+    .sidebar{
+        width:100%;
+        border-right:none;
+        border-bottom:1px solid var(--border);
+    }
+
+    .content{
+        padding:20px;
+    }
+
+    #applyTable{
+        display:block;
+        overflow-x:auto;
+    }
+
+}

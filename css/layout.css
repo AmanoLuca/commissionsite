@@ -1,0 +1,242 @@
+/* =========================
+   GLOBAL FIX (핵심 안정화)
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.container {
+    width: min(1400px, 96%);
+    margin: 10px auto;
+}
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+    height: 260px;
+
+    background: #eef2ff;
+
+    border: 1px solid var(--border);
+    border-radius: 24px;
+
+    margin-bottom: 18px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::before {
+    content: "메인 배너 준비중";
+
+    font-size: 36px;
+    font-weight: 800;
+
+    color: #7b89b8;
+}
+
+/* =========================
+   LAYOUT (핵심 수정)
+========================= */
+
+.content {
+    display: grid;
+    grid-template-columns: 190px 1fr;
+    gap: 16px;
+
+    align-items: start; /* ⭐ 중요: 높이 동기화 방지 */
+}
+
+/* =========================
+   SIDEBAR (안정화)
+========================= */
+
+.sidebar {
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    padding: 18px;
+
+    height: auto;
+    align-self: start;
+
+    position: sticky;
+    top: 20px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    background: white;
+
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    padding: 24px;
+
+    min-width: 0;
+    height: auto;
+}
+
+/* =========================
+   SIDEBAR TITLE
+========================= */
+
+.sidebar h2 {
+    font-size: 18px;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   MENU
+========================= */
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    margin-bottom: 24px;
+}
+
+.menu li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 14px;
+
+    border-radius: 12px;
+
+    transition: .2s;
+}
+
+.menu li:hover a {
+    background: #f5f7ff;
+}
+
+.menu li.active a {
+    background: var(--primary);
+    color: white;
+}
+
+.menu svg {
+    width: 18px;
+    height: 18px;
+}
+
+/* =========================
+   INFO SECTION
+========================= */
+
+.information-title {
+    color: var(--primary);
+    font-size: 18px;
+
+    margin-bottom: 14px;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: #f3f5ff;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--primary);
+}
+
+.info-item {
+    margin-bottom: 16px;
+}
+
+.info-item strong {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+.main-text {
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.sub-text {
+    font-size: 0.875rem;
+    color: var(--sub);
+}
+
+/* =========================
+   SLOT BOX
+========================= */
+
+.slot-box {
+    margin-top: 20px;
+}
+
+.slot-box h3 {
+    color: var(--primary);
+    font-size: 18px;
+
+    margin-bottom: 12px;
+}
+
+.slot-icons {
+    display: flex;
+    gap: 4px;
+
+    margin-bottom: 12px;
+}
+
+.slot-icons img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+#slotText {
+    color: var(--primary);
+
+    font-weight: 700;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.bottom-card {
+    background: #fff;
+
+    border: 1px solid var(--border);
+    border-radius: 20px;
+
+    padding: 28px;
+}

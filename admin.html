@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/admin.css">
+
+</head>
+
+<body>
+
+    <div class="admin-layout">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <h2>관리자</h2>
+            <p id="userInfo">로딩중...</p>
+
+            <!-- NAV -->
+            <button class="menu-btn" data-view="view-dashboard">대시보드</button>
+            <button class="menu-btn" data-view="view-slot">슬롯</button>
+            <button class="menu-btn" data-view="view-site">사이트</button>
+            <button class="menu-btn" data-view="view-apply">신청</button>
+            <button class="menu-btn" data-view="view-log">관리 로그</button>
+
+            <button id="logoutBtn" class="logout-btn">로그아웃</button>
+
+        </aside>
+
+        <!-- CONTENT -->
+        <main class="content">
+
+            <!-- DASHBOARD -->
+            <div id="view-dashboard" class="view">
+                <h1>대시보드</h1>
+
+                <div class="dashboard-grid">
+                    <div class="stat-card">
+                        <h3>전체 신청</h3>
+                        <p id="totalCount">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>대기중</h3>
+                        <p id="pendingCount">0</p>
+                    </div>
+
+                    <div class="stat-card">
+                        <h3>완료</h3>
+                        <p id="doneCount">0</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <p>현재 슬롯: <b id="currentSlot">-</b></p>
+                    <p>최대 슬롯: <b id="maxSlot">-</b></p>
+                    <p>남은 슬롯: <b id="remainSlot">-</b></p>
+                </div>
+            </div>
+
+            <!-- SLOT -->
+            <div id="view-slot" class="view">
+                <h1>슬롯 관리</h1>
+
+                <div class="card">
+                    <input id="currentCount" type="number" placeholder="현재 슬롯">
+                    <input id="maxCount" type="number" placeholder="최대 슬롯">
+                    <button id="saveSlotBtn">저장</button>
+                </div>
+            </div>
+
+            <!-- SITE -->
+            <div id="view-site" class="view">
+                <h1>사이트 설정</h1>
+
+                <div class="card">
+                    <input id="notice" placeholder="공지사항">
+
+                    <select id="siteStatus">
+                        <option value="on">ON</option>
+                        <option value="off">OFF</option>
+                    </select>
+
+                    <button id="saveSiteBtn">저장</button>
+                </div>
+            </div>
+
+            <div id="view-log" class="view">
+
+                <h1>관리자 로그</h1>
+
+                <div class="card">
+                    <input id="logSearchInput" type="text" placeholder="관리자 이메일 검색">
+                </div>
+
+                <div class="card">
+                    <div id="logList">
+                        로그 로딩중...
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- APPLY -->
+            <div id="view-apply" class="view">
+
+                <h1>신청 관리</h1>
+
+                <div class="card">
+
+                    <input id="searchInput" type="text" placeholder="이름 또는 이메일 검색">
+
+                    <select id="statusFilter">
+                        <option value="all">전체</option>
+                        <option value="pending">대기</option>
+                        <option value="progress">진행중</option>
+                        <option value="done">완료</option>
+                    </select>
+
+                </div>
+
+                <div class="card">
+
+                    <table id="applyTable">
+
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>이름</th>
+                                <th>이메일</th>
+                                <th>상태</th>
+                                <th>신청일</th>
+                                <th>상세</th>
+                                <th>삭제</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="applyList">
+                            <tr>
+                                <td colspan="7">로딩중...</td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+
+                    <div id="pagination"></div>
+
+                </div>
+
+            </div>
+
+            <div id="detailModal" class="modal">
+
+                <div class="modal-content">
+
+                    <button id="closeDetailModal">
+                        ✕
+                    </button>
+
+                    <h2>신청 상세</h2>
+
+                    <div id="detailContent"></div>
+
+                </div>
+
+            </div>
+
+            <div id="imageModal" class="modal">
+
+                <div class="image-modal-content">
+
+                    <button id="closeImageModal">
+                        ✕
+                    </button>
+
+                    <img id="previewImage" src="" alt="preview">
+
+                </div>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- MODULE ENTRY -->
+    <script type="module" src="./js/admin.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,202 @@
+/* =========================
+   TITLE
+========================= */
+
+.section-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 24px;
+}
+
+.title-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.title-left span {
+    width: 5px;
+    height: 30px;
+
+    background: var(--primary);
+    border-radius: 999px;
+}
+
+.title-left h2 {
+    font-size: 28px;
+    line-height: 1.2;
+    margin: 0;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.commission-guide {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.guide-section {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px;
+}
+
+.guide-section h3 {
+    color: var(--primary);
+    font-size: 1.2rem;
+    margin-bottom: 18px;
+}
+
+/* =========================
+   PROCESS
+========================= */
+
+.process-wrap {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+
+    background: #f8faff;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 24px;
+}
+
+.process-item {
+    text-align: center;
+}
+
+.process-icon {
+    width: 72px;
+    height: 72px;
+
+    margin: 0 auto 12px;
+
+    border: 1px solid var(--border);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #f8faff;
+}
+
+.process-icon svg {
+    width: 30px;
+    height: 30px;
+    color: var(--primary);
+}
+
+.process-item h4 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.process-item p {
+    font-size: 0.8rem;
+    color: var(--sub);
+}
+
+/* =========================
+   GUIDE LIST
+========================= */
+
+.guide-section ul {
+    padding-left: 20px;
+}
+
+.guide-section li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.guide-section .note {
+    list-style: none;
+    padding-left: 0;
+    color: var(--sub);
+    font-size: 0.9rem;
+}
+
+/* =========================
+   TABLE
+========================= */
+
+.guide-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.guide-table th,
+.guide-table td {
+    border: 1px solid var(--border);
+    padding: 12px;
+    text-align: center;
+}
+
+.guide-table th {
+    background: #eef3ff;
+    font-weight: 700;
+}
+
+.guide-table td {
+    background: white;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.o {
+    color: #16a34a;
+    font-weight: 700;
+}
+
+.x {
+    color: #dc2626;
+    font-weight: 700;
+}
+
+.guide-note {
+    margin-top: 14px;
+    color: var(--sub);
+    font-size: 0.9rem;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 1024px) {
+
+    .process-wrap {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .title-left h2 {
+        font-size: 1.5rem;
+    }
+
+    .process-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .guide-table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+}

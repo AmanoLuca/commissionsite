@@ -1,0 +1,127 @@
+:root {
+    --primary: #5b7cff;
+    --primary-hover: #4b6df5;
+
+    --bg: #f6f8ff;
+    --card: #ffffff;
+
+    --border: #dce5ff;
+
+    --text: #1f2937;
+    --sub: #6b7280;
+
+    --radius: 18px;
+
+    --shadow: 0 4px 12px rgba(91, 124, 255, .08);
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 18px;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: Pretendard, "Noto Sans KR", sans-serif;
+
+    font-size: 1rem;
+    line-height: 1.7;
+  
+    font-weight: 400;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   ELEMENT RESET
+========================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+/* =========================
+   TYPOGRAPHY SYSTEM
+========================= */
+
+/* headings */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+/* text */
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+/* small text */
+small,
+.sub-text {
+    font-size: 0.95rem;
+    color: var(--sub);
+}
+
+/* UI text */
+label {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+button {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+input,
+textarea,
+select {
+    font-size: 1rem;
+    line-height: 1.4;
+    font-family: inherit;
+}
